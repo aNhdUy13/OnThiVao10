@@ -8,6 +8,6 @@
     <stroke android:width="2dp" android:color="@color/black"/>
 -->
 
-    <solid android:color="#D789F34F" />
+    <solid android:color="#2F6E32" />
 
 </shape>

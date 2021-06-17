@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "971825960675",
+    "project_id": "on-thi-vao-10",
+    "storage_bucket": "on-thi-vao-10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971825960675:android:387876c8b462de461b97d6",
+        "android_client_info": {
+          "package_name": "com.nda.onthivao10_dethi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971825960675-iqg7rbu5v6ub8iaqe410n0oihsfs0gv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApm41HWljm1bJkMvC4o-f2w0B5n4J0iXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971825960675-iqg7rbu5v6ub8iaqe410n0oihsfs0gv3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -32,7 +32,7 @@ public class fragment_math_result extends Fragment {
         txtResult_6_advance = (TextView) view.findViewById(R.id.txt_topic_3);
         txtResult_dethi_2018 = (TextView) view.findViewById(R.id.txt_topic_4);
         txtResult_dethi_2019 = (TextView) view.findViewById(R.id.txt_topic_5);
-
+        txtResult_dethi_2020 = (TextView) view.findViewById(R.id.txt_topic_6);
         txtResult_1_20.setText("(Đáp Án) Bộ 40 Đề Được Bộ Chọn Lọc\n (1 - 21 )");
         txtResult_1_20.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +76,18 @@ public class fragment_math_result extends Fragment {
                 Intent in = new Intent(getContext(), math_DapAn_2018_19_20_21.class);
                 Bundle extras = new Bundle();
                 extras.putBoolean("DapAn_2019", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+
+        txtResult_dethi_2020.setText("Bộ Đề Thi Năm 2020 \n(Chính Thức)");
+        txtResult_dethi_2020.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("DapAn_2020", true);
                 in.putExtras(extras);
                 startActivity(in);
             }

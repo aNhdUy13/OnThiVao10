@@ -78,7 +78,7 @@ public class fragment_math_topic extends Fragment {
                 startActivity(in);
             }
         });
-        
+
         txtDeThi2020.setText("Bộ Đề Thi Năm 2020 \n(Chính Thức)");
         txtDeThi2020.setOnClickListener(new View.OnClickListener() {
             @Override
