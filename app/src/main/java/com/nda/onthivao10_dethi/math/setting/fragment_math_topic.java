@@ -18,7 +18,8 @@ import com.nda.onthivao10_dethi.math.outside_dethi.math_topic_40;
 import com.nda.onthivao10_dethi.math.outside_dethi.math_topic_40_from_20_40;
 
 public class fragment_math_topic extends Fragment {
-    TextView txt40MathTopic, txt40MathTopic_From_21_40, txt6TopicAdvance, txtDeThi2018,txtDeThi2019;
+    TextView txt40MathTopic, txt40MathTopic_From_21_40, txt6TopicAdvance, txtDeThi2018,txtDeThi2019,
+            txtDeThi2020,txtDeThi2021;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -29,6 +30,7 @@ public class fragment_math_topic extends Fragment {
         txt6TopicAdvance            = (TextView) view.findViewById(R.id.txt_topic_3);
         txtDeThi2018                = (TextView) view.findViewById(R.id.txt_topic_4);
         txtDeThi2019                = (TextView) view.findViewById(R.id.txt_topic_5);
+        txtDeThi2020                = (TextView) view.findViewById(R.id.txt_topic_6);
 
         txt40MathTopic.setText("Bộ 40 Đề Được Bộ Chọn Lọc \n (1 - 20 )");
         txt40MathTopic.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +74,18 @@ public class fragment_math_topic extends Fragment {
                 Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
                 Bundle extras = new Bundle();
                 extras.putBoolean("DeThi_2019", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+        
+        txtDeThi2020.setText("Bộ Đề Thi Năm 2020 \n(Chính Thức)");
+        txtDeThi2020.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("DeThi_2020", true);
                 in.putExtras(extras);
                 startActivity(in);
             }

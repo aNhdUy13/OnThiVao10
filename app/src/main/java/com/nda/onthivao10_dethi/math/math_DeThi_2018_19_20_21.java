@@ -24,7 +24,7 @@ public class math_DeThi_2018_19_20_21 extends AppCompatActivity {
     TextView txtMain_title,txt_src1,txt_src2,txt_src3,txt_src4,txt_src5,
             txt_src6,txt_src7,txt_src8,txt_src9,txt_src10;
     ImageView imgBack;
-    Intent in_2018, in_2019,in2020,in_2021 ;
+    Intent in_2018, in_2019,in_2020,in_2021 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +59,156 @@ public class math_DeThi_2018_19_20_21 extends AppCompatActivity {
             });
             showCard_2019();
         }
+        in_2020 = getIntent();
+        Bundle extras_2020 = in_2020.getExtras();
+        if (extras_2020.containsKey("DeThi_2020"))
+        {
+            txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2020");
+            imgBack.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
+            showCard_2020();
+        }
 
 
 
     }
+    private void showCard_2020()
+    {
+        txt_src1.setText("Sơn La ");
+        txt_src1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), SonLa_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("sonla_math_detail_2020", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+
+        txt_src2.setText(" Kiên Giang ");
+        txt_src2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), KienGiang_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("kiengiang_math_detail_2020", true);
+                in.putExtras(extras);
+
+                startActivity(in);
+            }
+        });
+
+        txt_src3.setText("Tp HCM ");
+        txt_src3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HCM_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("HCM_math_detail_2020", true);
+                in.putExtras(extras);
+
+                startActivity(in);
+            }
+        });
+
+        txt_src4.setText("Tp Hà Nội ");
+        txt_src4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HN_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("HN_math_detail_2020", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+        txt_src5.setText("Hải Phòng ");
+        txt_src5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HaiPhong_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("HaiPhong_math_detail_2020", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+
+        txt_src6.setText("Hải Dương");
+        txt_src6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HaiDuong_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("HaiDuong_math_detail_2020", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+
+
+        txt_src7.setText("Đà Nẵng");
+        txt_src7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), DaNang_de.class);
+                Bundle extras = new Bundle();
+
+                extras.putBoolean("DaNang_math_detail_2020", true);
+                in.putExtras(extras);
+
+                startActivity(in);
+            }
+        });
+
+        txt_src8.setText("Bình Phước");
+        txt_src8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), BinhPhuoc_de.class);
+                Bundle extras = new Bundle();
+
+                extras.putBoolean("BinhPhuoc_math_detail_2020", true);
+                in.putExtras(extras);
+
+                startActivity(in);
+            }
+        });
+
+        txt_src9.setText("Bạc Liêu");
+        txt_src9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), BacLieu_de.class);
+                Bundle extras = new Bundle();
+
+                extras.putBoolean("BacLieu_math_detail_2020", true);
+                in.putExtras(extras);
+
+                startActivity(in);
+            }
+        });
+        txt_src10.setText("An Giang");
+        txt_src10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), AnGiang_de.class);
+                Bundle extras = new Bundle();
+
+                extras.putBoolean("AnGiang_math_detail_2020", true);
+                in.putExtras(extras);
+
+                startActivity(in);
+            }
+        });
+    }
+
+
     private void showCard_2019()
     {
         txt_src1.setText("Sơn La ");

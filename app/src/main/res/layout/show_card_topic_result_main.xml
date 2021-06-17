@@ -177,6 +177,37 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_tp_id_6"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+                        <TextView
+                            android:background="@color/white"
+                            android:layout_weight="0.3"
+                            android:textSize="17dp"
+                            android:gravity="center"
+                            android:text="6"
+                            android:textColor="#676868"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
+                        <TextView
+                            android:id="@+id/txt_topic_6"
+                            android:textSize="17dp"
+                            android:textColor="#676868"
+                            android:gravity="center"
+                            android:text="test 6"
+                            android:layout_weight="1.7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </GridLayout>
         </ScrollView>

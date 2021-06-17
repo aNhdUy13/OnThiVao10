@@ -54,7 +54,142 @@ public class math_DapAn_2018_19_20_21 extends AppCompatActivity {
                 from_2019();
             }
 
+            in_2020 = getIntent();
+            extras_2020 = in_2020.getExtras();
+            if(extras_2020.containsKey("DapAn_2020"))
+            {
+                txtMain_title.setText("(Đáp Án) Đề Thi Toán Vào 10 Năm 2020");
+                from_2020();
+            }
+
         }
+    private void from_2020() {
+        txt_src1.setText("Sơn La ");
+        txt_src1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), SonLa_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("sonla_RSmath_detail_2020",true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+
+        txt_src2.setText(" Kiên Giang ");
+        txt_src2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), KienGiang_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("kiengiang_RSmath_detail_2020",true);
+                in.putExtras(extras);
+                startActivity(in);
+
+            }
+        });
+        txt_src3.setText("Tp HCM ");
+        txt_src3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HCM_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("HCM_RSmath_detail_2020",true);
+                in.putExtras(extras);
+                startActivity(in);
+
+            }
+        });
+
+        txt_src4.setText("Tp Hà Nôi ");
+        txt_src4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HN_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("HN_RSmath_detail_2020",true);
+                in.putExtras(extras);
+                startActivity(in);
+
+            }
+        });
+        txt_src5.setText("Hải Phòng ");
+        txt_src5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HaiPhong_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("haiphong_RSmath_detail_2020",true);
+                in.putExtras(extras);
+                startActivity(in);
+
+            }
+        });
+        txt_src6.setText("Hải Dương");
+        txt_src6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HaiDuong_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("haiduong_RSmath_detail_2020",true);
+                in.putExtras(extras);
+                startActivity(in);
+
+            }
+        });
+
+        txt_src7.setText("Đà Nẵng");
+        txt_src7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), DaNang_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("danang_RSmath_detail_2020",true);
+                in.putExtras(extras);
+                startActivity(in);
+
+            }
+        });
+        txt_src8.setText("Bình Phước");
+        txt_src8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), BinhPhuoc_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("binhphuoc_RSmath_detail_2020",true);
+                in.putExtras(extras);
+                startActivity(in);
+
+            }
+        });
+
+        txt_src9.setText("Bạc Liêu");
+        txt_src9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), BacLieu_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("baclieu_RSmath_detail_2020",true);
+                in.putExtras(extras);
+                startActivity(in);
+
+            }
+        });
+
+        txt_src10.setText("An Giang");
+        txt_src10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), AnGiang_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("angiang_RSmath_detail_2020",true);
+                in.putExtras(extras);
+                startActivity(in);
+
+            }
+        });
+    }
+
 
     private void from_2019() {
         txt_src1.setText("Sơn La ");
