@@ -525,7 +525,7 @@
                                     android:textColor="@color/white"
                                     android:gravity="center|left"
                                     android:textSize="17dp"
-                                    android:text=" (P7M) 7 tháng"
+                                    android:text=" (P1Y) 1 năm"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"/>
                             </LinearLayout>
@@ -568,7 +568,7 @@
                                     android:textColor="@color/white"
                                     android:gravity="center|left"
                                     android:textSize="17dp"
-                                    android:text=" 5.99$"
+                                    android:text=" 9.99$"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"/>
                             </LinearLayout>
@@ -612,7 +612,7 @@
                                     android:textColor="@color/white"
                                     android:gravity="center|left"
                                     android:textSize="17dp"
-                                    android:text=" Gói Này Sẽ Loại Bỏ Tất Cả Các Loại Quảng Cáo Tồn Tại Trên Ứng Dụng \n- (7 tháng) -"
+                                    android:text=" Gói Này Sẽ Loại Bỏ Tất Cả Các Loại Quảng Cáo Tồn Tại Trên Ứng Dụng \n- (1 năm) -"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"/>
                             </LinearLayout>
@@ -625,7 +625,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="0dp">
                             <Button
-                                android:id="@+id/btn_purchase_adBlock_7_month"
+                                android:id="@+id/btn_purchase_adBlock_1_year"
                                 android:text="Mua"
                                 android:backgroundTint="#FFC107"
                                 android:layout_width="100dp"
