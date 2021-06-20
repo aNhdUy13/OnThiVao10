@@ -53,13 +53,6 @@ public class advanced_setting extends AppCompatActivity implements PurchasesUpda
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advanced_setting);
         imgStar_advance = (ImageView) findViewById(R.id.star_advance);
-
-        SetUpBillingClient();
-        init();
-        back();
-    }
-    private void init()
-    {
         txtPremium = (TextView) findViewById(R.id.txt_premium);
         recyclerView = (RecyclerView) findViewById(R.id.recycle_product);
         recyclerView.setHasFixedSize(true);
@@ -67,15 +60,26 @@ public class advanced_setting extends AppCompatActivity implements PurchasesUpda
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.addItemDecoration(new DividerItemDecoration(this,layoutManager.getOrientation()));
 
+        skulist.add("adblock_1_month");
+        skulist.add("adblock_3_month");
+        skulist.add("adblock_1_year");
+
+        SetUpBillingClient();
+        init();
+        back();
+    }
+    private void init()
+    {
+
+
 
     }
 
     private void loadAllSubcricePackage() {
-        //skulist.add("adblock_1_month");
         if (billingClient.isReady())
         {
                 SkuDetailsParams params = SkuDetailsParams.newBuilder()
-                        .setSkusList(Arrays.asList("adblock_1_month"))
+                        .setSkusList(skulist)
                         .setType(BillingClient.SkuType.SUBS)
                         .build();
                 billingClient.querySkuDetailsAsync(params, new SkuDetailsResponseListener() {
