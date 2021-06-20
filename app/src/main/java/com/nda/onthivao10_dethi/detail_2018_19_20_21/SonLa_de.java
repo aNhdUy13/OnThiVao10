@@ -47,7 +47,29 @@ public class SonLa_de extends AppCompatActivity {
             from_2019();
         }
 
+        in_3 = getIntent();
+        extras3 = in_3.getExtras();
+        if (extras3.containsKey("sonla_math_detail_2020")) {
+            txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2020\n - Sơn La -");
 
+            from_2020();
+        }
+
+
+    }
+    private void from_2020() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_sonla_2020_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        cv2.setVisibility(View.GONE);
+        cv3.setVisibility(View.GONE);
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
     }
 
     private void from_2019() {

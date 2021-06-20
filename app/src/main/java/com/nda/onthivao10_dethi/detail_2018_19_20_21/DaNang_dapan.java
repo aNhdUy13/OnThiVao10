@@ -48,6 +48,32 @@ public class DaNang_dapan extends AppCompatActivity {
 
         }
 
+        in_2020 = getIntent();
+        extras_2020 = in_2020.getExtras();
+        if (extras_2020.containsKey("danang_RSmath_detail_2020")) {
+            txtMain_title.setText("(Đáp Án) Đề Thi Toán Vào 10 Năm 2020\n - Đà Nẵng -");
+            from2020();
+        }
+
+    }
+    private void from2020()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_danang_2020_rs1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.math_danang_2020_rs2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        cv3.setVisibility(View.GONE);
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
     }
     private void from2019()
     {

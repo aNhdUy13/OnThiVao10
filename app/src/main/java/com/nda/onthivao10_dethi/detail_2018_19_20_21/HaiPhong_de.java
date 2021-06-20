@@ -47,6 +47,30 @@ public class HaiPhong_de extends AppCompatActivity {
             from2019();
 
         }
+        in_2020 = getIntent();
+        extras_2020 = in_2020.getExtras();
+        if (extras_2020.containsKey("HaiPhong_math_detail_2020")) {
+            txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2020\n - Hải Phòng -");
+            from2020();
+
+        }
+    }
+    private void from2020()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_haiphong_2020_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.math_haiphong_2020_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        cv3.setVisibility(View.GONE);
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
 
     }
     private void from2019()

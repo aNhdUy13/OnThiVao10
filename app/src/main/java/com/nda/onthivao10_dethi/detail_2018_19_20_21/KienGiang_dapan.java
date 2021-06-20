@@ -17,7 +17,7 @@ public class KienGiang_dapan extends AppCompatActivity {
     TextView txtMain_title;
     ImageView imgBack, img_src_1,img_src_2,img_src_3,img_src_4,img_src_5,img_src_6,img_src_7,img_src_8,
             img_src_9,img_src_10;
-    CardView cv2,cv3,cv4,cv5,cv6,cv7,cv8,cv9,cv10;
+    CardView cv1,cv2,cv3,cv4,cv5,cv6,cv7,cv8,cv9,cv10;
     Bundle extras_2018,extras_2019,extras_2020,extras_2021;
     Intent in_2018,in_2019,in_2020,in_2021;
     @Override
@@ -48,6 +48,32 @@ public class KienGiang_dapan extends AppCompatActivity {
             from_2019();
         }
 
+
+        in_2020 = getIntent();
+        extras_2020 = in_2020.getExtras();
+        if (extras_2020.containsKey("kiengiang_RSmath_detail_2020")) {
+            txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2020\n - Kiên Giang -");
+
+            from_2020();
+        }
+
+    }
+
+    private void from_2020()
+    {
+        cv1.setVisibility(View.GONE);
+        cv2.setVisibility(View.GONE);
+        cv3.setVisibility(View.GONE);
+
+
+
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
     }
     private void from_2019()
     {
@@ -103,6 +129,7 @@ public class KienGiang_dapan extends AppCompatActivity {
         img_src_9     = (ImageView) findViewById(R.id.show_de_9);
         img_src_10     = (ImageView) findViewById(R.id.show_de_10);
 
+        cv1           = (CardView) findViewById(R.id.card_1);
         cv2           = (CardView) findViewById(R.id.card_2);
         cv3           = (CardView) findViewById(R.id.card_3);
         cv4           = (CardView) findViewById(R.id.card_4);

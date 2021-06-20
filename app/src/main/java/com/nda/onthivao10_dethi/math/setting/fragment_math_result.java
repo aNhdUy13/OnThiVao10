@@ -85,7 +85,7 @@ public class fragment_math_result extends Fragment {
         txtResult_dethi_2020.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), math_DapAn_2018_19_20_21.class);
                 Bundle extras = new Bundle();
                 extras.putBoolean("DapAn_2020", true);
                 in.putExtras(extras);

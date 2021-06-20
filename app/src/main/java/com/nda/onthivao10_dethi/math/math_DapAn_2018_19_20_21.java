@@ -63,6 +63,7 @@ public class math_DapAn_2018_19_20_21 extends AppCompatActivity {
             }
 
         }
+
     private void from_2020() {
         txt_src1.setText("Sơn La ");
         txt_src1.setOnClickListener(new View.OnClickListener() {

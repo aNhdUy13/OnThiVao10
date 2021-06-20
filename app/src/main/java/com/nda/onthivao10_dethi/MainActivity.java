@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.nda.onthivao10_dethi.billing.advanced_setting;
 import com.startapp.sdk.adsbase.StartAppAd;
 import com.startapp.sdk.adsbase.StartAppSDK;
 
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         AdvancesSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,advanced_setting.class));
+                startActivity(new Intent(MainActivity.this, advanced_setting.class));
             }
         });
         goToTinhDiem.setOnClickListener(new View.OnClickListener() {

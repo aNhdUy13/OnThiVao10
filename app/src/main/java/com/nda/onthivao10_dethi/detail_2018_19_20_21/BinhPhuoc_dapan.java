@@ -47,9 +47,37 @@ public class BinhPhuoc_dapan extends AppCompatActivity {
             from2019();
 
         }
+        in_2020 = getIntent();
+        extras_2020 = in_2020.getExtras();
+        if (extras_2020.containsKey("binhphuoc_RSmath_detail_2020")) {
+            txtMain_title.setText("(Đáp Án) Đề Thi Toán Vào 10 Năm 2020\n - Bình Phước -");
+            from2020();
+
+        }
+    }
+    private void from2020()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_binhphuoc_2020_rs1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.math_binhphuoc_2020_rs2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.math_binhphuoc_2020_rs3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
+
 
     }
-
     private void from2019()
     {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_binhphuong_2019_rs1);

@@ -31,18 +31,18 @@ public class math_DeThi_2018_19_20_21 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_card_topic_rs_de_thi_cac_nam);
         mapting();
-
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         in_2018= getIntent();
         Bundle extras = in_2018.getExtras();
         if (extras.containsKey("DeThi_2018"))
         {
             txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2018");
-            imgBack.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
+
             showCard_2018();
         }
 
@@ -51,12 +51,7 @@ public class math_DeThi_2018_19_20_21 extends AppCompatActivity {
         if (extras_2019.containsKey("DeThi_2019"))
         {
             txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2019");
-            imgBack.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
+
             showCard_2019();
         }
         in_2020 = getIntent();
@@ -64,12 +59,7 @@ public class math_DeThi_2018_19_20_21 extends AppCompatActivity {
         if (extras_2020.containsKey("DeThi_2020"))
         {
             txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2020");
-            imgBack.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    finish();
-                }
-            });
+
             showCard_2020();
         }
 
