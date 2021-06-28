@@ -20,7 +20,7 @@ public class math_6_topic_advance extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.show_topic_20);
+        setContentView(R.layout.show_slot_20);
         mapting();
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override

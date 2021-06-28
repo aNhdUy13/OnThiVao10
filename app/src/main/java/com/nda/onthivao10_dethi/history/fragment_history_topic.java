@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.nda.onthivao10_dethi.R;
+import com.nda.onthivao10_dethi.english.setting.outside_dethi.english_practice_topic;
 import com.nda.onthivao10_dethi.math.math_DeThi_2018_19_20_21;
 import com.nda.onthivao10_dethi.math.outside_dethi.math_6_topic_advance;
 import com.nda.onthivao10_dethi.math.outside_dethi.math_topic_40_from_20_40;
@@ -41,7 +42,11 @@ public class fragment_history_topic extends Fragment {
         txtCard1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(getContext() , math_topic_40.class));
+                Intent in = new Intent(getContext(), history_practice_topic.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("history_practice_Topic_1_3", true);
+                in.putExtras(extras);
+                startActivity(in);
             }
         });
 
@@ -49,25 +54,31 @@ public class fragment_history_topic extends Fragment {
         txtCard2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), math_topic_40_from_20_40.class));
-            }
+                Intent in = new Intent(getContext(), history_practice_topic.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("history_practice_Topic_4_6", true);
+                in.putExtras(extras);
+                startActivity(in);            }
         });
 
         txtCard3.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (7 - 9 )");
         txtCard3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), math_6_topic_advance.class));
-            }
+                Intent in = new Intent(getContext(), history_practice_topic.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("history_practice_Topic_7_9", true);
+                in.putExtras(extras);
+                startActivity(in);            }
         });
 
         txtCard4.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (10 - 12 )");
         txtCard4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), history_practice_topic.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2018", true);
+                extras.putBoolean("history_practice_Topic_10_12", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
@@ -77,9 +88,9 @@ public class fragment_history_topic extends Fragment {
         txtCard5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), history_practice_topic.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2018", true);
+                extras.putBoolean("history_practice_Topic_13_15", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
@@ -88,9 +99,9 @@ public class fragment_history_topic extends Fragment {
         txtCard6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), history_practice_topic.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2018", true);
+                extras.putBoolean("history_practice_Topic_16_18", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
@@ -100,13 +111,14 @@ public class fragment_history_topic extends Fragment {
         txtCard7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), history_practice_topic.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2018", true);
+                extras.putBoolean("history_practice_Topic_19_20", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
         });
+
 
         txtDeThi2018.setText("Bộ Đề Thi Năm 2018 \n(Chính Thức)");
         txtDeThi2018.setOnClickListener(new View.OnClickListener() {

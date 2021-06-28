@@ -28,7 +28,7 @@ public class math_result_from_1_42 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.show_result_42);
+        setContentView(R.layout.show_slot_42);
         mapting();
         /* Display result from topic 1 => 21 */
         imgBack.setOnClickListener(new View.OnClickListener() {

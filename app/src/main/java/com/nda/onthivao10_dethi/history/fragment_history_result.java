@@ -37,78 +37,89 @@ public class fragment_history_result extends Fragment {
         txtDeThi2020   = (TextView) view.findViewById(R.id.txt_topic_main_card_10);
         txtDeThi2021   = (TextView) view.findViewById(R.id.txt_topic_main_card_11);
 
-        txtCard1.setText("(Đáp Án) Bộ 20 Đề Được Bộ Chọn Lọc \n (1 - 3 )");
+        txtCard1.setText("Bộ 20 Đề Được Bộ Chọn Lọc \n (1 - 3 )");
         txtCard1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(getContext() , math_topic_40.class));
+                Intent in = new Intent(getContext(), history_practice_result.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("history_practice_Result_1_3", true);
+                in.putExtras(extras);
+                startActivity(in);
             }
         });
 
-        txtCard2.setText("(Đáp Án) Bộ 20 Đề Được Bộ Chọn Lọc\n (4 - 6 )");
+        txtCard2.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (4 - 6 )");
         txtCard2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), math_topic_40_from_20_40.class));
-            }
+                Intent in = new Intent(getContext(), history_practice_result.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("history_practice_Result_4_6", true);
+                in.putExtras(extras);
+                startActivity(in);            }
         });
 
-        txtCard3.setText("(Đáp Án) Bộ 20 Đề Được Bộ Chọn Lọc\n (7 - 9 )");
+        txtCard3.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (7 - 9 )");
         txtCard3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), math_6_topic_advance.class));
-            }
+                Intent in = new Intent(getContext(), history_practice_result.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("history_practice_Result_7_9", true);
+                in.putExtras(extras);
+                startActivity(in);            }
         });
 
-        txtCard4.setText("(Đáp Án) Bộ 20 Đề Được Bộ Chọn Lọc\n (10 - 12 )");
+        txtCard4.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (10 - 12 )");
         txtCard4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), history_practice_result.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2018", true);
+                extras.putBoolean("history_practice_Result_10_12", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
         });
 
-        txtCard5.setText("(Đáp Án) Bộ 20 Đề Được Bộ Chọn Lọc\n (13 - 15 )");
+        txtCard5.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (13 - 15 )");
         txtCard5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), history_practice_result.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2018", true);
+                extras.putBoolean("history_practice_Result_13_15", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
         });
-        txtCard6.setText("(Đáp Án) Bộ 20 Đề Được Bộ Chọn Lọc\n (16 - 18 )");
+        txtCard6.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (16 - 18 )");
         txtCard6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), history_practice_result.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2018", true);
+                extras.putBoolean("history_practice_Result_16_18", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
         });
 
-        txtCard7.setText("(Đáp Án) Bộ 20 Đề Được Bộ Chọn Lọc\n (19 - 20 )");
+        txtCard7.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (19 - 20 )");
         txtCard7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), history_practice_result.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2018", true);
+                extras.putBoolean("history_practice_Result_19_20", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
         });
 
-        txtDeThi2018.setText("(Đáp Án) Bộ Đề Thi Năm 2018 \n(Chính Thức)");
+
+        txtDeThi2018.setText("Bộ Đề Thi Năm 2018 \n(Chính Thức)");
         txtDeThi2018.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,7 +131,7 @@ public class fragment_history_result extends Fragment {
             }
         });
 
-        txtDeThi2019.setText("(Đáp Án) Bộ Đề Thi Năm 2019 \n(Chính Thức)");
+        txtDeThi2019.setText("Bộ Đề Thi Năm 2019 \n(Chính Thức)");
         txtDeThi2019.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,7 +143,7 @@ public class fragment_history_result extends Fragment {
             }
         });
 
-        txtDeThi2020.setText("(Đáp Án) Bộ Đề Thi Năm 2020 \n(Chính Thức)");
+        txtDeThi2020.setText("Bộ Đề Thi Năm 2020 \n(Chính Thức)");
         txtDeThi2020.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -144,7 +155,7 @@ public class fragment_history_result extends Fragment {
             }
         });
 
-        txtDeThi2021.setText("(Đáp Án) Bộ Đề Thi Năm 2021 \n(Chính Thức)");
+        txtDeThi2021.setText("Bộ Đề Thi Năm 2021 \n(Chính Thức)");
         txtDeThi2021.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

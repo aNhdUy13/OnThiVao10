@@ -22,7 +22,7 @@ public class math_topic_40_from_20_40 extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.show_topic_20);
+            setContentView(R.layout.show_slot_20);
             mapting();
 
             imgBack.setOnClickListener(new View.OnClickListener() {

@@ -30,6 +30,16 @@
             android:name="com.startapp.sdk.RETURN_ADS_ENABLED"
             android:value="false" />
 
+        <activity android:name=".history.history_practice_result"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity android:name=".history.history_practice_topic"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+        <activity android:name=".english.setting.outside_dethi.english_practice_result"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity android:name=".english.setting.outside_dethi.english_practice_topic"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
         <activity android:name=".literature.outside_dethi.literature_practice_result"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
 

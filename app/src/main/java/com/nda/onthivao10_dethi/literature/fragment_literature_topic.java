@@ -15,7 +15,7 @@ import com.nda.onthivao10_dethi.R;
 import com.nda.onthivao10_dethi.literature.outside_dethi.literature_practice_topic;
 
 public class fragment_literature_topic extends Fragment {
-    TextView txtCard1, txtCard2, txtCard3, txtCard4,txtCard5,txtDeThi2018,
+    TextView txtCard1, txtCard2, txtCard3, txtCard4,txtCard5,txtCard6,txtDeThi2018,
             txtDeThi2019,txtDeThi2020,txtDeThi2021;
     @Nullable
     @Override
@@ -27,11 +27,12 @@ public class fragment_literature_topic extends Fragment {
         txtCard3       = (TextView) view.findViewById(R.id.txt_topic_3);
         txtCard4       = (TextView) view.findViewById(R.id.txt_topic_4);
         txtCard5       = (TextView) view.findViewById(R.id.txt_topic_5);
+        txtCard6       = (TextView) view.findViewById(R.id.txt_topic_main_card_6);
 
-        txtDeThi2018   = (TextView) view.findViewById(R.id.txt_topic_main_card_6);
-        txtDeThi2019   = (TextView) view.findViewById(R.id.txt_topic_main_card_7);
-        txtDeThi2020   = (TextView) view.findViewById(R.id.txt_topic_main_card_8);
-        txtDeThi2021   = (TextView) view.findViewById(R.id.txt_topic_main_card_9);
+        txtDeThi2018   = (TextView) view.findViewById(R.id.txt_topic_main_card_7);
+        txtDeThi2019   = (TextView) view.findViewById(R.id.txt_topic_main_card_8);
+        txtDeThi2020   = (TextView) view.findViewById(R.id.txt_topic_main_card_9);
+        txtDeThi2021   = (TextView) view.findViewById(R.id.txt_topic_main_card_10);
 
         txtCard1.setText("Bộ 20 Đề Được Bộ Chọn Lọc \n (1 - 3 )");
         txtCard1.setOnClickListener(new View.OnClickListener() {
@@ -67,20 +68,31 @@ public class fragment_literature_topic extends Fragment {
             }
         });
 
-        txtCard4.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (12 - 16 )");
+        txtCard4.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (12 - 14 )");
         txtCard4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(getContext(), literature_practice_topic.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("literature_practice_Topic_12_16", true);
+                extras.putBoolean("literature_practice_Topic_12_14", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+        txtCard5.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n ( 15 - 16 )");
+        txtCard5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getContext(), literature_practice_topic.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("literature_practice_Topic_15_16", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
         });
 
-        txtCard5.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (17 - 20 )");
-        txtCard5.setOnClickListener(new View.OnClickListener() {
+        txtCard6.setText("Bộ 20 Đề Được Bộ Chọn Lọc\n (17 - 20 )");
+        txtCard6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(getContext(), literature_practice_topic.class);
@@ -90,6 +102,8 @@ public class fragment_literature_topic extends Fragment {
                 startActivity(in);
             }
         });
+
+
 
         txtDeThi2018.setText("Bộ Đề Thi Năm 2018 \n(Chính Thức)");
         txtDeThi2018.setOnClickListener(new View.OnClickListener() {

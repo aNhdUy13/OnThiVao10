@@ -18,12 +18,12 @@ public class literature_practice_result extends AppCompatActivity {
             img_TC_src11,img_TC_src12,img_TC_src13,img_TC_src14,img_TC_src15,
             img_TC_src16,img_TC_src17,img_TC_src18,img_TC_src19,img_TC_src20, imgBack;
     TextView txtNaviTitle;
-    Intent in_practice_1_3,in_practice_4_7,in_practice_8_11,in_practice_12_16,in_practice_17_20;
-    Bundle extras_1_3,extras_4_7,extras_8_11,extras_12_16,extras_17_20;
+    Intent in_practice_1_3,in_practice_4_7,in_practice_8_11,in_practice_12_14,in_practice_15_16,in_practice_17_20;
+    Bundle extras_1_3,extras_4_7,extras_8_11,extras_12_14,extras_15_16,extras_17_20;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.show_topic_20);
+        setContentView(R.layout.show_slot_20);
         mapting();
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +57,195 @@ public class literature_practice_result extends AppCompatActivity {
 
         }
 
+        in_practice_12_14 = getIntent();
+        extras_12_14 = in_practice_12_14.getExtras();
+        if (extras_12_14.containsKey("literature_practice_Result_12_14")) {
+            txtNaviTitle.setText("(Đáp Án) Bộ 20 Đề Được Bộ Chọn Lọc \n ( 12 - 14 )");
+            practice_12_14();
+
+        }
+
+        in_practice_15_16 = getIntent();
+        extras_15_16 = in_practice_15_16.getExtras();
+        if (extras_15_16.containsKey("literature_practice_Result_15_16")) {
+            txtNaviTitle.setText("(Đáp Án) Bộ 20 Đề Được Bộ Chọn Lọc \n ( 15 - 16 )");
+            practice_15_16();
+
+        }
+
+        in_practice_17_20 = getIntent();
+        extras_17_20 = in_practice_17_20.getExtras();
+        if (extras_17_20.containsKey("literature_practice_Result_17_20")) {
+            txtNaviTitle.setText("(Đáp Án) Bộ 20 Đề Được Bộ Chọn Lọc \n ( 17 - 20 )");
+            practice_17_20();
+
+        }
     }
+    private void practice_17_20() {
+        Bitmap bitmap_tc_1 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs1);
+        img_TC_src1.setImageBitmap(bitmap_tc_1);
+
+        Bitmap bitmap_tc_2 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs2);
+        img_TC_src2.setImageBitmap(bitmap_tc_2);
+
+        Bitmap bitmap_tc_3 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs3);
+        img_TC_src3.setImageBitmap(bitmap_tc_3);
+
+        Bitmap bitmap_tc_4 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs4);
+        img_TC_src4.setImageBitmap(bitmap_tc_4);
+
+        Bitmap bitmap_tc_5 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs5);
+        img_TC_src5.setImageBitmap(bitmap_tc_5);
+
+        Bitmap bitmap_tc_6 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs6);
+        img_TC_src6.setImageBitmap(bitmap_tc_6);
+
+        Bitmap bitmap_tc_7 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs7);
+        img_TC_src7.setImageBitmap(bitmap_tc_7);
+
+        Bitmap bitmap_tc_8 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs8);
+        img_TC_src8.setImageBitmap(bitmap_tc_8);
+
+        Bitmap bitmap_tc_9 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs9);
+        img_TC_src9.setImageBitmap(bitmap_tc_9);
+
+        Bitmap bitmap_tc_10 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs10);
+        img_TC_src10.setImageBitmap(bitmap_tc_10);
+
+        Bitmap bitmap_tc_11 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs11);
+        img_TC_src11.setImageBitmap(bitmap_tc_11);
+
+        Bitmap bitmap_tc_12 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs12);
+        img_TC_src12.setImageBitmap(bitmap_tc_12);
+
+        Bitmap bitmap_tc_13 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs13);
+        img_TC_src13.setImageBitmap(bitmap_tc_13);
+
+        Bitmap bitmap_tc_14 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de17_20_rs14);
+        img_TC_src14.setImageBitmap(bitmap_tc_14);
+
+
+        img_TC_src15.setVisibility(View.GONE);
+
+        img_TC_src16.setVisibility(View.GONE);
+
+        img_TC_src17.setVisibility(View.GONE);
+
+        img_TC_src18.setVisibility(View.GONE);
+
+        img_TC_src19.setVisibility(View.GONE);
+
+        img_TC_src20.setVisibility(View.GONE);
+    }
+
+    private void practice_15_16() {
+        Bitmap bitmap_tc_1 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs12);
+        img_TC_src1.setImageBitmap(bitmap_tc_1);
+
+        Bitmap bitmap_tc_2 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs13);
+        img_TC_src2.setImageBitmap(bitmap_tc_2);
+
+        Bitmap bitmap_tc_3 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs14);
+        img_TC_src3.setImageBitmap(bitmap_tc_3);
+
+        Bitmap bitmap_tc_4 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs15);
+        img_TC_src4.setImageBitmap(bitmap_tc_4);
+
+        Bitmap bitmap_tc_5 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs16);
+        img_TC_src5.setImageBitmap(bitmap_tc_5);
+
+        Bitmap bitmap_tc_6 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs17);
+        img_TC_src6.setImageBitmap(bitmap_tc_6);
+
+        Bitmap bitmap_tc_7 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs18);
+        img_TC_src7.setImageBitmap(bitmap_tc_7);
+
+        Bitmap bitmap_tc_8 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs19);
+        img_TC_src8.setImageBitmap(bitmap_tc_8);
+
+        Bitmap bitmap_tc_9 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs20);
+        img_TC_src9.setImageBitmap(bitmap_tc_9);
+
+        Bitmap bitmap_tc_10 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs21);
+        img_TC_src10.setImageBitmap(bitmap_tc_10);
+
+        Bitmap bitmap_tc_11 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs22);
+        img_TC_src11.setImageBitmap(bitmap_tc_11);
+
+        Bitmap bitmap_tc_12 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs23);
+        img_TC_src12.setImageBitmap(bitmap_tc_12);
+
+        Bitmap bitmap_tc_13 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs24);
+        img_TC_src13.setImageBitmap(bitmap_tc_13);
+
+        Bitmap bitmap_tc_14 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs25);
+        img_TC_src14.setImageBitmap(bitmap_tc_14);
+
+
+        img_TC_src15.setVisibility(View.GONE);
+
+        img_TC_src16.setVisibility(View.GONE);
+
+        img_TC_src17.setVisibility(View.GONE);
+
+        img_TC_src18.setVisibility(View.GONE);
+
+        img_TC_src19.setVisibility(View.GONE);
+
+        img_TC_src20.setVisibility(View.GONE);
+    }
+
+    private void practice_12_14() {
+        Bitmap bitmap_tc_1 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs1);
+        img_TC_src1.setImageBitmap(bitmap_tc_1);
+
+        Bitmap bitmap_tc_2 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs2);
+        img_TC_src2.setImageBitmap(bitmap_tc_2);
+
+        Bitmap bitmap_tc_3 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs3);
+        img_TC_src3.setImageBitmap(bitmap_tc_3);
+
+        img_TC_src4.setVisibility(View.GONE);
+
+        Bitmap bitmap_tc_5 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs5);
+        img_TC_src5.setImageBitmap(bitmap_tc_5);
+
+        Bitmap bitmap_tc_6 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs6);
+        img_TC_src6.setImageBitmap(bitmap_tc_6);
+
+        Bitmap bitmap_tc_7 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs7);
+        img_TC_src7.setImageBitmap(bitmap_tc_7);
+
+        Bitmap bitmap_tc_8 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs8);
+        img_TC_src8.setImageBitmap(bitmap_tc_8);
+
+        Bitmap bitmap_tc_9 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs9);
+        img_TC_src9.setImageBitmap(bitmap_tc_9);
+
+        Bitmap bitmap_tc_10 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs10);
+        img_TC_src10.setImageBitmap(bitmap_tc_10);
+
+        Bitmap bitmap_tc_11 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de12_16_rs11);
+        img_TC_src11.setImageBitmap(bitmap_tc_11);
+
+        img_TC_src12.setVisibility(View.GONE);
+        img_TC_src13.setVisibility(View.GONE);
+        img_TC_src14.setVisibility(View.GONE);
+
+
+        img_TC_src15.setVisibility(View.GONE);
+
+        img_TC_src16.setVisibility(View.GONE);
+
+        img_TC_src17.setVisibility(View.GONE);
+
+        img_TC_src18.setVisibility(View.GONE);
+
+        img_TC_src19.setVisibility(View.GONE);
+
+        img_TC_src20.setVisibility(View.GONE);
+    }
+
 
     private void practice_8_11() {
         Bitmap bitmap_tc_1 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de_8_11_rs1);
@@ -94,13 +282,13 @@ public class literature_practice_result extends AppCompatActivity {
         img_TC_src11.setImageBitmap(bitmap_tc_11);
 
         Bitmap bitmap_tc_12 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de_8_11_rs12);
-        img_TC_src11.setImageBitmap(bitmap_tc_12);
+        img_TC_src12.setImageBitmap(bitmap_tc_12);
 
         Bitmap bitmap_tc_13 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de_8_11_rs13);
-        img_TC_src11.setImageBitmap(bitmap_tc_13);
+        img_TC_src13.setImageBitmap(bitmap_tc_13);
 
         Bitmap bitmap_tc_14 = BitmapFactory.decodeResource(getResources(),R.mipmap.van_de_8_11_rs14);
-        img_TC_src11.setImageBitmap(bitmap_tc_14);
+        img_TC_src14.setImageBitmap(bitmap_tc_14);
 
         img_TC_src15.setVisibility(View.GONE);
 
