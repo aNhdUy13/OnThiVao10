@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
             String packageName = "com.nda.grade_calculator";
             if (isPackageAvailable(packageName))
             {
-                ll_link.setVisibility(View.GONE);
+                ll_link.setVisibility(View.INVISIBLE);
                 txtTitle_luyenTap.setText("Phần Mềm Tính Điểm\n(ĐÃ TẢI)");
                 btn_searchLink_openApp.setText("Mở Ứng Dụng");
                 btn_searchLink_openApp.setOnClickListener(new View.OnClickListener() {

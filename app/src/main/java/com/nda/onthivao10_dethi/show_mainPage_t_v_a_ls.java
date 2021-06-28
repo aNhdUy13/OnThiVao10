@@ -16,7 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.nda.onthivao10_dethi.R;
+import com.nda.onthivao10_dethi.english.setting.adapter_fragment_english;
+import com.nda.onthivao10_dethi.history.adapter_fragment_history;
+import com.nda.onthivao10_dethi.literature.adapter_fragment_literature;
 import com.nda.onthivao10_dethi.math.setting.adapter_fragment_math;
 
 public class show_mainPage_t_v_a_ls extends AppCompatActivity {
@@ -102,22 +104,169 @@ public class show_mainPage_t_v_a_ls extends AppCompatActivity {
     }
 
     private void setupViewPager_history() {
+        viewPager = (ViewPager) findViewById(R.id.viewPager_content);
+        adapter_fragment_history adapter_fragment_history = new adapter_fragment_history(getSupportFragmentManager(),
+                FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+
+        viewPager.setAdapter(adapter_fragment_history);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position)
+                {
+                    case 0:
+                        navigationView.getMenu().findItem(R.id.see_topic).setChecked(true);
+                        break;
+                    case 1:
+                        navigationView.getMenu().findItem(R.id.see_result).setChecked(true);
+                        break;
+
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void showTiTle_history() {
+        navigationView = (BottomNavigationView) findViewById(R.id.topNavi);
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.see_topic:
+                        viewPager.setCurrentItem(0);
+                        break;
+                    case R.id.see_result:
+                        viewPager.setCurrentItem(1);
+                        break;
+
+                }
+                return true;
+            }
+        });
+
     }
 
     private void setupViewPager_literature() {
+        viewPager = (ViewPager) findViewById(R.id.viewPager_content);
+        adapter_fragment_literature adapter_fragment_literature = new adapter_fragment_literature(getSupportFragmentManager(),
+                FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+
+        viewPager.setAdapter(adapter_fragment_literature);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position)
+                {
+                    case 0:
+                        navigationView.getMenu().findItem(R.id.see_topic).setChecked(true);
+                        break;
+                    case 1:
+                        navigationView.getMenu().findItem(R.id.see_result).setChecked(true);
+                        break;
+
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void showTiTle_literature() {
+        navigationView = (BottomNavigationView) findViewById(R.id.topNavi);
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.see_topic:
+                        viewPager.setCurrentItem(0);
+                        break;
+                    case R.id.see_result:
+                        viewPager.setCurrentItem(1);
+                        break;
+
+                }
+                return true;
+            }
+        });
     }
 
     private void setupViewPager_english() {
+        viewPager = (ViewPager) findViewById(R.id.viewPager_content);
+        adapter_fragment_english adapter_fragment_english = new adapter_fragment_english(getSupportFragmentManager(),
+                FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+
+        viewPager.setAdapter(adapter_fragment_english);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position)
+                {
+                    case 0:
+                        navigationView.getMenu().findItem(R.id.see_topic).setChecked(true);
+                        break;
+                    case 1:
+                        navigationView.getMenu().findItem(R.id.see_result).setChecked(true);
+                        break;
+
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
     }
 
     private void showTiTle_english() {
+        navigationView = (BottomNavigationView) findViewById(R.id.topNavi);
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.see_topic:
+                        viewPager.setCurrentItem(0);
+                        break;
+                    case R.id.see_result:
+                        viewPager.setCurrentItem(1);
+                        break;
+
+                }
+                return true;
+            }
+        });
     }
+
 
     private void showTiTle_DeToan()
     {

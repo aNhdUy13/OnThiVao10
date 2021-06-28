@@ -25,10 +25,16 @@
         <activity android:name=".billing.advanced_setting"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
 
+
         <meta-data
             android:name="com.startapp.sdk.RETURN_ADS_ENABLED"
             android:value="false" />
 
+        <activity android:name=".literature.outside_dethi.literature_practice_result"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+        <activity android:name=".literature.outside_dethi.literature_practice_topic"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
         <activity
             android:name=".detail_2018_19_20_21.AnGiang_de"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
