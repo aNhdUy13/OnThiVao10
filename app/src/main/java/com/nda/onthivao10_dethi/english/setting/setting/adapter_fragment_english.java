@@ -1,4 +1,4 @@
-package com.nda.onthivao10_dethi.english.setting;
+package com.nda.onthivao10_dethi.english.setting.setting;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

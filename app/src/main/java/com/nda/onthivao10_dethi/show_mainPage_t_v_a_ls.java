@@ -16,8 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.nda.onthivao10_dethi.english.setting.adapter_fragment_english;
-import com.nda.onthivao10_dethi.history.adapter_fragment_history;
+import com.nda.onthivao10_dethi.english.setting.setting.adapter_fragment_english;
+import com.nda.onthivao10_dethi.history.setting.adapter_fragment_history;
 import com.nda.onthivao10_dethi.literature.adapter_fragment_literature;
 import com.nda.onthivao10_dethi.math.setting.adapter_fragment_math;
 

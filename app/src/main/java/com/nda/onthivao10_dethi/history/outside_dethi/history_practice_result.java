@@ -1,4 +1,4 @@
-package com.nda.onthivao10_dethi.history;
+package com.nda.onthivao10_dethi.history.outside_dethi;
 
 import android.content.Intent;
 import android.graphics.Bitmap;

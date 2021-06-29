@@ -18,8 +18,8 @@ public class HN_de extends AppCompatActivity {
     ImageView imgBack, img_src_1,img_src_2,img_src_3,img_src_4,img_src_5,img_src_6,img_src_7,img_src_8,
             img_src_9,img_src_10;
     CardView cv2,cv3,cv4,cv5,cv6,cv7,cv8,cv9,cv10;
-    Bundle extras_2018,extras_2019,extras_2020,extras_2021;
-    Intent in_2018,in_2019,in_2020,in_2021;
+    Bundle extras_2018,extras_2019,extras_2020,extras_2021,history_extras_2021,english_extras_2019,english_extras_2020,english_extras_2021;
+    Intent in_2018,in_2019,in_2020,in_2021,history_in_2021,english_in_2019,english_in_2020,english_in_2021;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +31,8 @@ public class HN_de extends AppCompatActivity {
                 finish();
             }
         });
+
+        /*=============== Math =============== */
 
         in_2018 = getIntent();
         extras_2018 = in_2018.getExtras();
@@ -54,7 +56,83 @@ public class HN_de extends AppCompatActivity {
             from2020();
 
         }
+        /*=============== Math =============== */
+
+
+        /*=============== History =============== */
+        history_in_2021 = getIntent();
+        history_extras_2021 = history_in_2021.getExtras();
+        if (history_extras_2021.containsKey("hanoi_history_2021_topic")) {
+            txtMain_title.setText("Đề Thi Lich Sử Vào 10 Năm 2021\n - HN -");
+            history_2021();
+
+        }
+        /*=============== History =============== */
+
+        /*=============== English =============== */
+        english_in_2019 = getIntent();
+        english_extras_2019 = english_in_2019.getExtras();
+        if (english_extras_2019.containsKey("hn_english_2019_topic")) {
+            txtMain_title.setText("Đề Thi Tiếng Anh Vào 10 Năm 2019\n - Hà Nội -");
+            english_from2019();
+
+        }
+        /*=============== English =============== */
+
+
     }
+    private void english_from2019()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2019_hn_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2019_hn_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2019_hn_tp3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        Bitmap bitmap4 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2019_hn_tp4);
+        img_src_4.setImageBitmap(bitmap4);
+
+        Bitmap bitmap5 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2019_hn_tp5);
+        img_src_5.setImageBitmap(bitmap5);
+
+        Bitmap bitmap6 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2019_hn_tp6);
+        img_src_6.setImageBitmap(bitmap6);
+
+        Bitmap bitmap7 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2019_hn_tp7);
+        img_src_7.setImageBitmap(bitmap7);
+
+        Bitmap bitmap8 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2019_hn_tp8);
+        img_src_8.setImageBitmap(bitmap8);
+
+        cv9.setVisibility(View.GONE);
+
+        cv10.setVisibility(View.GONE);
+
+    }
+    private void history_2021() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.history_hanoi_2021_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.history_hanoi_2021_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.history_hanoi_2021_tp3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        Bitmap bitmap4 = BitmapFactory.decodeResource(getResources(),R.mipmap.history_hanoi_2021_tp4);
+        img_src_4.setImageBitmap(bitmap4);
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+    }
+
     private void from2020()
     {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_hanoi_2020_tp1);

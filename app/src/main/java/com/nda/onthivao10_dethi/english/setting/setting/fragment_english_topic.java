@@ -1,4 +1,4 @@
-package com.nda.onthivao10_dethi.english.setting;
+package com.nda.onthivao10_dethi.english.setting.setting;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +9,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.nda.onthivao10_dethi.R;
+import com.nda.onthivao10_dethi.english.setting.english_DeThi_2018_19_20_21_;
 import com.nda.onthivao10_dethi.english.setting.outside_dethi.english_practice_topic;
 import com.nda.onthivao10_dethi.literature.outside_dethi.literature_practice_topic;
 import com.nda.onthivao10_dethi.math.math_DeThi_2018_19_20_21;
@@ -22,6 +24,9 @@ import com.nda.onthivao10_dethi.math.outside_dethi.math_topic_40_from_20_40;
 public class fragment_english_topic extends Fragment {
     TextView txtCard1, txtCard2, txtCard3, txtCard4,txtCard5,txtDeThi2018,
             txtDeThi2019,txtDeThi2020,txtDeThi2021;
+
+    CardView cv10,cv11;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -37,6 +42,9 @@ public class fragment_english_topic extends Fragment {
         txtDeThi2019   = (TextView) view.findViewById(R.id.txt_topic_main_card_7);
         txtDeThi2020   = (TextView) view.findViewById(R.id.txt_topic_main_card_8);
         txtDeThi2021   = (TextView) view.findViewById(R.id.txt_topic_main_card_9);
+
+        cv10     = (CardView) view.findViewById(R.id.card_tp_id_10);
+        cv11     = (CardView) view.findViewById(R.id.card_tp_id_11);
 
         txtCard1.setText("Bộ 22 Đề Được Bộ Chọn Lọc \n (1 - 5 )");
         txtCard1.setOnClickListener(new View.OnClickListener() {
@@ -99,9 +107,9 @@ public class fragment_english_topic extends Fragment {
         txtDeThi2018.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), english_DeThi_2018_19_20_21_.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2019", true);
+                extras.putBoolean("english_DeThi_2018", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
@@ -110,9 +118,9 @@ public class fragment_english_topic extends Fragment {
         txtDeThi2019.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), english_DeThi_2018_19_20_21_.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2019", true);
+                extras.putBoolean("english_DeThi_2019", true);
                 in.putExtras(extras);
                 startActivity(in);
             }
@@ -122,11 +130,11 @@ public class fragment_english_topic extends Fragment {
         txtDeThi2020.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
-//                Bundle extras = new Bundle();
-//                extras.putBoolean("DeThi_2020", true);
-//                in.putExtras(extras);
-//                startActivity(in);
+                Intent in = new Intent(getContext(), english_DeThi_2018_19_20_21_.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("english_DeThi_2020", true);
+                in.putExtras(extras);
+                startActivity(in);
             }
         });
 
@@ -134,14 +142,15 @@ public class fragment_english_topic extends Fragment {
         txtDeThi2021.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
-//                Bundle extras = new Bundle();
-//                extras.putBoolean("DeThi_2020", true);
-//                in.putExtras(extras);
-//                startActivity(in);
+                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("english_DeThi_2021", true);
+                in.putExtras(extras);
+                startActivity(in);
             }
         });
-
+        cv10.setVisibility(View.GONE);
+        cv11.setVisibility(View.GONE);
         return view;
     }
 

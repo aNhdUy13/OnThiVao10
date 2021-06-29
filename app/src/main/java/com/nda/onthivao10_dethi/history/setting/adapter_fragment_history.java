@@ -1,4 +1,4 @@
-package com.nda.onthivao10_dethi.history;
+package com.nda.onthivao10_dethi.history.setting;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
