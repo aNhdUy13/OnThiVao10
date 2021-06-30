@@ -52,6 +52,14 @@ public class DaNang_de extends AppCompatActivity {
             txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2020\n - Đà Nẵng -");
             from2020();
         }
+        in_2021 = getIntent();
+        extras_2021 = in_2021.getExtras();
+        if (extras_2021.containsKey("DaNang_math_detail_2021")) {
+            txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2021\n - Đà Nẵng -");
+            from2021();
+        }
+
+
         /*=============== English =============== */
         english_in_2019 = getIntent();
         english_extras_2019 = english_in_2019.getExtras();
@@ -60,8 +68,69 @@ public class DaNang_de extends AppCompatActivity {
             english_from2019();
 
         }
+
+        english_in_2020 = getIntent();
+        english_extras_2020 = english_in_2020.getExtras();
+        if (english_extras_2020.containsKey("danang_english_2020_topic")) {
+            txtMain_title.setText("Đề Thi Tiếng Anh Vào 10 Năm 2020\n - Đà Nẵng -");
+            english_from2020();
+
+        }
+
+        english_in_2021 = getIntent();
+        english_extras_2021 = english_in_2021.getExtras();
+        if (english_extras_2021.containsKey("danang_english_2021_topic")) {
+            txtMain_title.setText("Đề Thi Tiếng Anh Vào 10 Năm 2021\n - Đà Nẵng -");
+            english_from2021();
+
+        }
         /*=============== English =============== */
     }
+    private void english_from2021()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2021_danang_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2021_danang_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2021_danang_tp3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        Bitmap bitmap4 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2021_danang_tp4);
+        img_src_4.setImageBitmap(bitmap4);
+
+        cv5.setVisibility(View.GONE);
+
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
+    }
+    private void english_from2020()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_danang_2020_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_danang_2020_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_danang_2020_tp3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
+    }
+
     private void english_from2019()
     {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_danang_2019_tp1);
@@ -78,6 +147,26 @@ public class DaNang_de extends AppCompatActivity {
 
         Bitmap bitmap5 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_danang_2019_tp5);
         img_src_5.setImageBitmap(bitmap5);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
+    }
+
+
+
+    private void from2021()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_2021_danang_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+
+        cv2.setVisibility(View.GONE);
+        cv3.setVisibility(View.GONE);
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
         cv6.setVisibility(View.GONE);
         cv7.setVisibility(View.GONE);
         cv8.setVisibility(View.GONE);

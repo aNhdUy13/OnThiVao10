@@ -56,6 +56,13 @@ public class HN_de extends AppCompatActivity {
             from2020();
 
         }
+        in_2021 = getIntent();
+        extras_2021 = in_2021.getExtras();
+        if (extras_2021.containsKey("HN_math_detail_2021")) {
+            txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2021\n - HN -");
+            from2021();
+
+        }
         /*=============== Math =============== */
 
 
@@ -77,8 +84,68 @@ public class HN_de extends AppCompatActivity {
             english_from2019();
 
         }
+
+        english_in_2020 = getIntent();
+        english_extras_2020 = english_in_2020.getExtras();
+        if (english_extras_2020.containsKey("hn_english_2020_topic")) {
+            txtMain_title.setText("Đề Thi / Đáp Án Tiếng Anh Vào 10 \nNăm 2020 - Hà Nội -");
+            english_from2020();
+
+        }
+        english_in_2021 = getIntent();
+        english_extras_2021 = english_in_2021.getExtras();
+        if (english_extras_2021.containsKey("hn_english_2021_topic")) {
+            txtMain_title.setText("Đề Thi Tiếng Anh Vào 10 Năm 2021 \n- Hà Nội -");
+            english_from2021();
+
+        }
+
         /*=============== English =============== */
 
+
+    }
+    private void english_from2021()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hanoi_2021_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hanoi_2021_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hanoi_2021_tp3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        Bitmap bitmap4 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hanoi_2021_tp4);
+        img_src_4.setImageBitmap(bitmap4);
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
+    }
+    private void english_from2020()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hanoi_2020_tprs1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hanoi_2020_tprs2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hanoi_2020_tprs3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        Bitmap bitmap4 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hanoi_2020_tprs4);
+        img_src_4.setImageBitmap(bitmap4);
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
 
     }
     private void english_from2019()
@@ -132,7 +199,22 @@ public class HN_de extends AppCompatActivity {
         cv9.setVisibility(View.GONE);
         cv10.setVisibility(View.GONE);
     }
+    private void from2021()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_2021_hanoi_tp1);
+        img_src_1.setImageBitmap(bitmap);
 
+        cv2.setVisibility(View.GONE);
+        cv3.setVisibility(View.GONE);
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
+    }
     private void from2020()
     {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_hanoi_2020_tp1);

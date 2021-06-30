@@ -99,7 +99,7 @@ public class fragment_math_topic extends Fragment {
             public void onClick(View v) {
                 Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
                 Bundle extras = new Bundle();
-                extras.putBoolean("DeThi_2020", true);
+                extras.putBoolean("DeThi_2021", true);
                 in.putExtras(extras);
                 startActivity(in);
             }

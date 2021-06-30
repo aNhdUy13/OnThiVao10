@@ -56,6 +56,14 @@ public class HCM_de extends AppCompatActivity {
 
         }
 
+        in_2021 = getIntent();
+        extras_2021 = in_2021.getExtras();
+        if (extras_2021.containsKey("HCM_math_detail_2021")) {
+            txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2021\n - HCM -");
+            //from2021(); Chưa Có Đề
+
+        }
+
         /* ================= English =================== */
         english_in_2018 = getIntent();
         english_extras_2018 = english_in_2018.getExtras();
@@ -73,11 +81,76 @@ public class HCM_de extends AppCompatActivity {
 
         }
 
+        english_in_2020 = getIntent();
+        english_extras_2020 = english_in_2020.getExtras();
+        if (english_extras_2020.containsKey("hcm_english_2020_topic")) {
+            txtMain_title.setText("Đề Thi Tiếng Anh Vào 10 Năm 2020\n - HCM -");
+            english_from2020();
+
+        }
+
+        english_in_2021 = getIntent();
+        english_extras_2021 = english_in_2021.getExtras();
+        if (english_extras_2021.containsKey("hcm_english_2021_topic")) {
+            txtMain_title.setText("Đề Thi Tiếng Anh Vào 10 Năm 2021\n - HCM -");
+            english_from2021();
+
+        }
         /* ================= English =================== */
 
 
 
     }
+    private void english_from2021()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2021_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2021_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2021_tp3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        Bitmap bitmap4 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2021_tp4);
+        img_src_4.setImageBitmap(bitmap4);
+
+        Bitmap bitmap5 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2021_tp5);
+        img_src_5.setImageBitmap(bitmap5);
+
+        Bitmap bitmap6 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2021_tp6);
+        img_src_6.setImageBitmap(bitmap6);
+
+        Bitmap bitmap7 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2021_tp7);
+        img_src_7.setImageBitmap(bitmap7);
+
+        Bitmap bitmap8 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2021_tp8);
+        img_src_8.setImageBitmap(bitmap8);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+    }
+    private void english_from2020()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2020_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2020_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2020_tp3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        Bitmap bitmap4 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2020_tp4);
+        img_src_4.setImageBitmap(bitmap4);
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+    }
+
     private void english_from2019()
     {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2019_hcm_tprs1);
@@ -121,6 +194,24 @@ public class HCM_de extends AppCompatActivity {
         cv10.setVisibility(View.GONE);
     }
 
+    /*=======================  Math  =======================*/
+//    private void from2021()
+//    {
+//        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_hcm_2021_tp1);
+//        img_src_1.setImageBitmap(bitmap);
+//
+//        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.math_hcm_2021_tp2);
+//        img_src_2.setImageBitmap(bitmap2);
+//
+//        cv3.setVisibility(View.GONE);
+//        cv4.setVisibility(View.GONE);
+//        cv5.setVisibility(View.GONE);
+//        cv6.setVisibility(View.GONE);
+//        cv7.setVisibility(View.GONE);
+//        cv8.setVisibility(View.GONE);
+//        cv9.setVisibility(View.GONE);
+//        cv10.setVisibility(View.GONE);
+//    }
     private void from2020()
     {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_hcm_2020_tp1);

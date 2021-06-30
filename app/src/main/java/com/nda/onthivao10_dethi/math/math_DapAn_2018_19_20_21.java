@@ -7,14 +7,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.nda.onthivao10_dethi.R;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.AnGiang_dapan;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.BacLieu_dapan;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.BinhPhuoc_dapan;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.DaNang_dapan;
+import com.nda.onthivao10_dethi.detail_2018_19_20_21.DaNang_de;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.HCM_dapan;
+import com.nda.onthivao10_dethi.detail_2018_19_20_21.HCM_de;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.HN_dapan;
+import com.nda.onthivao10_dethi.detail_2018_19_20_21.HN_de;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.HaiDuong_dapan;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.HaiPhong_dapan;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.KienGiang_dapan;
@@ -26,7 +30,10 @@ public class math_DapAn_2018_19_20_21 extends AppCompatActivity {
         ImageView imgBack;
         Intent in_2018,in_2019,in_2020,in_2021;
         Bundle extras_2018,extras_2019,extras_2020,extras_2021;
-        @Override
+
+        CardView cv1,cv2,cv3,cv4,cv5,cv6,cv7,cv8,cv9,cv10;
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.show_card_topic_rs_de_thi_cac_nam);
@@ -61,9 +68,63 @@ public class math_DapAn_2018_19_20_21 extends AppCompatActivity {
                 txtMain_title.setText("(Đáp Án) Đề Thi Toán Vào 10 Năm 2020");
                 from_2020();
             }
-
+            in_2021 = getIntent();
+            extras_2021 = in_2021.getExtras();
+            if(extras_2021.containsKey("DapAn_2021"))
+            {
+                txtMain_title.setText("(Đáp Án) Đề Thi Toán Vào 10 Năm 2021");
+                from_2021();
+            }
         }
+    private void from_2021()
+    {
+        txt_src1.setText("Tp HCM ");
+        txt_src1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HCM_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("HCM_math_detail_2021", true);
+                in.putExtras(extras);
 
+                startActivity(in);
+            }
+        });
+
+        txt_src2.setText("Tp Hà Nội ");
+        txt_src2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HN_dapan.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("HN_math_detail_2021", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+
+        txt_src3.setText("Đà Nẵng");
+        txt_src3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), DaNang_dapan.class);
+                Bundle extras = new Bundle();
+
+                extras.putBoolean("DaNang_math_detail_2021", true);
+                in.putExtras(extras);
+
+                startActivity(in);
+            }
+        });
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
+    }
     private void from_2020() {
         txt_src1.setText("Sơn La ");
         txt_src1.setOnClickListener(new View.OnClickListener() {
@@ -462,6 +523,15 @@ public class math_DapAn_2018_19_20_21 extends AppCompatActivity {
             txt_src8 = (TextView) findViewById(R.id.txt_topic_8);
             txt_src9 = (TextView) findViewById(R.id.txt_topic_9);
             txt_src10 = (TextView) findViewById(R.id.txt_topic_10);
-
+            cv1 = (CardView) findViewById(R.id.card_tp_id_1);
+            cv2 = (CardView) findViewById(R.id.card_tp_id_2);
+            cv3 = (CardView) findViewById(R.id.card_tp_id_3);
+            cv4 = (CardView) findViewById(R.id.card_tp_id_4);
+            cv5 = (CardView) findViewById(R.id.card_tp_id_5);
+            cv6 = (CardView) findViewById(R.id.card_tp_id_6);
+            cv7 = (CardView) findViewById(R.id.card_tp_id_7);
+            cv8 = (CardView) findViewById(R.id.card_tp_id_8);
+            cv9 = (CardView) findViewById(R.id.card_tp_id_9);
+            cv10 = (CardView) findViewById(R.id.card_tp_id_10);
         }
 }

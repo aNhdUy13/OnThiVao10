@@ -48,8 +48,118 @@ public class english_DeThi_2018_19_20_21_ extends AppCompatActivity {
 
             showCard_2019();
         }
+        in_2020= getIntent();
+        Bundle extras3 = in_2020.getExtras();
+        if (extras3.containsKey("english_DeThi_2020"))
+        {
+            txtMain_title.setText("Đề Thi Tiếng Anh Vào 10 Năm 2020");
+
+            showCard_2020();
+        }
+
+        in_2021= getIntent();
+        Bundle extras4 = in_2021.getExtras();
+        if (extras4.containsKey("english_DeThi_2021"))
+        {
+            txtMain_title.setText("Đề Thi Tiếng Anh Vào 10 Năm 2021");
+
+            showCard_2021();
+        }
+
 
     }
+    private void showCard_2021() {
+        txt_src1.setText("HCM ");
+        txt_src1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HCM_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("hcm_english_2021_topic", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+
+        txt_src2.setText("Hà Nội ");
+        txt_src2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HN_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("hn_english_2021_topic", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+
+        txt_src3.setText("Đà Nẵng ");
+        txt_src3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), DaNang_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("danang_english_2021_topic", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
+    }
+
+    private void showCard_2020() {
+        txt_src1.setText("HCM ");
+        txt_src1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HCM_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("hcm_english_2020_topic", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+
+        txt_src2.setText("Hà Nội ");
+        txt_src2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), HN_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("hn_english_2020_topic", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+
+        txt_src3.setText("Đà Nẵng ");
+        txt_src3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), DaNang_de.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("danang_english_2020_topic", true);
+                in.putExtras(extras);
+                startActivity(in);
+            }
+        });
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
+    }
+
     private void showCard_2019() {
         txt_src1.setText("HCM ");
         txt_src1.setOnClickListener(new View.OnClickListener() {

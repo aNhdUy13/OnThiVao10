@@ -130,11 +130,11 @@ public class fragment_english_result extends Fragment {
         txtDeThi2020.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent in = new Intent(getContext(), english_Result_2018_19_20_21_.class);
-//                Bundle extras = new Bundle();
-//                extras.putBoolean("DeThi_2020", true);
-//                in.putExtras(extras);
-//                startActivity(in);
+                Intent in = new Intent(getContext(), english_Result_2018_19_20_21_.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("english_2020_result", true);
+                in.putExtras(extras);
+                startActivity(in);
             }
         });
 
@@ -142,11 +142,11 @@ public class fragment_english_result extends Fragment {
         txtDeThi2021.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent in = new Intent(getContext(), english_Result_2018_19_20_21_.class);
-//                Bundle extras = new Bundle();
-//                extras.putBoolean("DeThi_2020", true);
-//                in.putExtras(extras);
-//                startActivity(in);
+                Intent in = new Intent(getContext(), english_Result_2018_19_20_21_.class);
+                Bundle extras = new Bundle();
+                extras.putBoolean("english_2021_result", true);
+                in.putExtras(extras);
+                startActivity(in);
             }
         });
 

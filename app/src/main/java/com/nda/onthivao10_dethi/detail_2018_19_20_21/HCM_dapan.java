@@ -57,6 +57,13 @@ public class HCM_dapan extends AppCompatActivity {
 
         }
 
+        in_2021 = getIntent();
+        extras_2021 = in_2021.getExtras();
+        if (extras_2021.containsKey("HCM_math_detail_2021")) {
+            txtMain_title.setText("(Đáp Án) Đề Thi Toán Vào 10 Năm 2021\n - HCM -");
+            //from2021(); Chưa Có Đáp Án
+
+        }
         /* ================= English =================== */
         english_in_2018 = getIntent();
         english_extras_2018 = english_in_2018.getExtras();
@@ -66,23 +73,32 @@ public class HCM_dapan extends AppCompatActivity {
 
         }
 
-        english_in_2019 = getIntent();
-        english_extras_2019 = english_in_2019.getExtras();
-        if (english_extras_2019.containsKey("hcm_english_2019_result")) {
-            txtMain_title.setText("(Đáp Án) Đề Thi Tiếng Anh Vào 10 Năm 2019\n - HCM -");
-            english_from2019();
+
+        english_in_2020 = getIntent();
+        english_extras_2020 = english_in_2020.getExtras();
+        if (english_extras_2020.containsKey("hcm_english_2020_result")) {
+            txtMain_title.setText("(Đáp Án) Đề Thi Tiếng Anh Vào 10 Năm 2020\n - HCM -");
+            english_from2020();
+
+        }
+
+        english_in_2021 = getIntent();
+        english_extras_2021 = english_in_2021.getExtras();
+        if (english_extras_2021.containsKey("hcm_english_2021_result")) {
+            txtMain_title.setText("(Đáp Án) Đề Thi Tiếng Anh Vào 10 Năm 2021\n - HCM -");
+            english_from2021();
 
         }
         /* ================= English =================== */
 
     }
-    private void english_from2019()
+    private void english_from2021()
     {
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2018_hcm_rs1);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2021_rs1);
         img_src_1.setImageBitmap(bitmap);
 
-        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2018_hcm_rs1);
-        img_src_2.setImageBitmap(bitmap2);
+        cv2.setVisibility(View.GONE);
+
 
         cv3.setVisibility(View.GONE);
         cv4.setVisibility(View.GONE);
@@ -93,6 +109,24 @@ public class HCM_dapan extends AppCompatActivity {
         cv9.setVisibility(View.GONE);
         cv10.setVisibility(View.GONE);
     }
+    private void english_from2020()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2020_rs1);
+        img_src_1.setImageBitmap(bitmap);
+
+        cv2.setVisibility(View.GONE);
+
+
+        cv3.setVisibility(View.GONE);
+        cv4.setVisibility(View.GONE);
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+    }
+
     private void english_from2018()
     {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_2018_hcm_rs1);

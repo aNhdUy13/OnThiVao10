@@ -142,7 +142,7 @@ public class fragment_english_topic extends Fragment {
         txtDeThi2021.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getContext(), math_DeThi_2018_19_20_21.class);
+                Intent in = new Intent(getContext(), english_DeThi_2018_19_20_21_.class);
                 Bundle extras = new Bundle();
                 extras.putBoolean("english_DeThi_2021", true);
                 in.putExtras(extras);

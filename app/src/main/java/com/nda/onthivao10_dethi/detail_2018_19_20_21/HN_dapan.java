@@ -55,7 +55,13 @@ public class HN_dapan extends AppCompatActivity {
             from2020();
 
         }
+        in_2021 = getIntent();
+        extras_2021 = in_2021.getExtras();
+        if (extras_2021.containsKey("HN_math_detail_2021")) {
+            txtMain_title.setText("Đề Thi Toán Vào 10 Năm 2021\n - HN -");
+            from2021();
 
+        }
         /*=============== History =============== */
         history_in_2021 = getIntent();
         history_extras_2021 = history_in_2021.getExtras();
@@ -74,7 +80,35 @@ public class HN_dapan extends AppCompatActivity {
             english_from2019();
 
         }
+
+        english_in_2021 = getIntent();
+        english_extras_2021 = english_in_2021.getExtras();
+        if (english_extras_2021.containsKey("hn_english_2021_result")) {
+            txtMain_title.setText("(Đáp Án) Đề Thi Tiếng Anh Vào 10 Năm 2021\n - Hà Nội -");
+            english_from2021();
+
+        }
         /*=============== English =============== */
+
+    }
+    private void english_from2021()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hanoi_2021_rs1);
+        img_src_1.setImageBitmap(bitmap);
+
+        cv2.setVisibility(View.GONE);
+        cv3.setVisibility(View.GONE);
+
+
+        cv4.setVisibility(View.GONE);
+
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
 
     }
     private void english_from2019()
@@ -114,7 +148,28 @@ public class HN_dapan extends AppCompatActivity {
         cv10.setVisibility(View.GONE);
     }
 
+    private void from2021()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_2021_hanoi_rs1);
+        img_src_1.setImageBitmap(bitmap);
 
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.math_2021_hanoi_rs1);
+        img_src_2.setImageBitmap(bitmap2);
+
+        cv3.setVisibility(View.GONE);
+
+
+        cv4.setVisibility(View.GONE);
+
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
+    }
     private void from2020()
     {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.math_hanoi_2020_rs1);
