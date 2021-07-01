@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.nda.onthivao10_dethi.R;
+import com.startapp.sdk.adsbase.StartAppAd;
 
 public class BinhPhuoc_dapan extends AppCompatActivity {
     TextView txtMain_title;
@@ -29,6 +30,8 @@ public class BinhPhuoc_dapan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+                StartAppAd.showAd(getApplicationContext());
+
             }
         });
 

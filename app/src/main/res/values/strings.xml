@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">OnThiVao10_DeThi</string>
+    <string name="app_name">Ôn Thi Vào 10</string>
+
+
+    <string name="share_subject" translatable="false">Ôn Thi Vào 10</string>
+    <string name="share_using" translatable="false">Ôn Thi Vào 10</string>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.nda.onthivao10_dethi.R;
@@ -22,6 +23,8 @@ import com.nda.onthivao10_dethi.math.outside_dethi.math_result_from_43_78;
 public class fragment_math_result extends Fragment {
     TextView txtResult_1_20, txtResult_20_40,txtResult_6_advance, txtResult_dethi_2018,txtResult_dethi_2019,txtResult_dethi_2020,
             txtResult_dethi_2021;
+    CardView cv8,cv9,cv10,cv11;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -34,6 +37,16 @@ public class fragment_math_result extends Fragment {
         txtResult_dethi_2019 = (TextView) view.findViewById(R.id.txt_topic_5);
         txtResult_dethi_2020 = (TextView) view.findViewById(R.id.txt_topic_main_card_6);
         txtResult_dethi_2021 = (TextView) view.findViewById(R.id.txt_topic_main_card_7);
+
+        cv8     = (CardView) view.findViewById(R.id.card_tp_id_8);
+        cv9     = (CardView) view.findViewById(R.id.card_tp_id_9);
+        cv10     = (CardView) view.findViewById(R.id.card_tp_id_10);
+        cv11     = (CardView) view.findViewById(R.id.card_tp_id_11);
+
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+        cv11.setVisibility(View.GONE);
 
         txtResult_1_20.setText("(Đáp Án) Bộ 40 Đề Được Bộ Chọn Lọc\n (1 - 21 )");
         txtResult_1_20.setOnClickListener(new View.OnClickListener() {

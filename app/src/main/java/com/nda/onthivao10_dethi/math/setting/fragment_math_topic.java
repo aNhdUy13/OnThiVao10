@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.nda.onthivao10_dethi.R;
@@ -20,6 +21,9 @@ import com.nda.onthivao10_dethi.math.outside_dethi.math_topic_40_from_20_40;
 public class fragment_math_topic extends Fragment {
     TextView txt40MathTopic, txt40MathTopic_From_21_40, txt6TopicAdvance, txtDeThi2018,txtDeThi2019,
             txtDeThi2020,txtDeThi2021;
+
+    CardView cv8,cv9,cv10,cv11;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -33,6 +37,15 @@ public class fragment_math_topic extends Fragment {
         txtDeThi2020                = (TextView) view.findViewById(R.id.txt_topic_main_card_6);
         txtDeThi2021                = (TextView) view.findViewById(R.id.txt_topic_main_card_7);
 
+        cv8     = (CardView) view.findViewById(R.id.card_tp_id_8);
+        cv9     = (CardView) view.findViewById(R.id.card_tp_id_9);
+        cv10     = (CardView) view.findViewById(R.id.card_tp_id_10);
+        cv11     = (CardView) view.findViewById(R.id.card_tp_id_11);
+
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+        cv11.setVisibility(View.GONE);
 
         txt40MathTopic.setText("Bộ 40 Đề Được Bộ Chọn Lọc \n (1 - 20 )");
         txt40MathTopic.setOnClickListener(new View.OnClickListener() {

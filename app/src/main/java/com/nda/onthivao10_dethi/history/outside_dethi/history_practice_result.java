@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nda.onthivao10_dethi.R;
+import com.startapp.sdk.adsbase.StartAppAd;
 
 public class history_practice_result extends AppCompatActivity {
     ImageView imgMathResult_40_from_1_42_src1, imgMathResult_40_from_1_42_src2, imgMathResult_40_from_1_42_src3,imgMathResult_40_from_1_42_src4,
@@ -39,6 +40,8 @@ public class history_practice_result extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+                StartAppAd.showAd(getApplicationContext());
+
             }
         });
 

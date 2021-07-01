@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.nda.onthivao10_dethi.R;
+import com.startapp.sdk.adsbase.StartAppAd;
 
 public class HCM_de extends AppCompatActivity {
     TextView txtMain_title;
@@ -30,6 +31,8 @@ public class HCM_de extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+                StartAppAd.showAd(getApplicationContext());
+
             }
         });
         in_2018 = getIntent();
@@ -99,8 +102,123 @@ public class HCM_de extends AppCompatActivity {
         /* ================= English =================== */
 
 
+        /* ================= Literature =================== */
+        Intent literature_in_2018 = getIntent();
+        Bundle literature_extras_2018 = literature_in_2018.getExtras();
+        if (literature_extras_2018.containsKey("HCM_literature_detail_2018")) {
+            txtMain_title.setText("Đề Thi Văn Vào 10 Năm 2018\n - HCM -");
+            literature_from2018();
+
+        }
+
+        Intent literature_in_2019 = getIntent();
+        Bundle literature_extras_2019 = literature_in_2019.getExtras();
+        if (literature_extras_2019.containsKey("HCM_literature_detail_2019")) {
+            txtMain_title.setText("Đề Thi Văn Vào 10 Năm 2019\n - HCM -");
+            literature_from2019();
+
+        }
+
+        Intent literature_in_2020 = getIntent();
+        Bundle literature_extras_2020 = literature_in_2020.getExtras();
+        if (literature_extras_2020.containsKey("HCM_literature_detail_2020")) {
+            txtMain_title.setText("Đề Thi Văn Vào 10 Năm 2020\n - HCM -");
+            literature_from2020();
+
+        }
+
+        Intent literature_in_2021 = getIntent();
+        Bundle literature_extras_2021 = literature_in_2021.getExtras();
+        if (literature_extras_2021.containsKey("HCM_literature_detail_2021")) {
+            txtMain_title.setText("Đề Thi Văn Vào 10 Năm 2021\n - HCM -");
+            //literature_from2021(); Chưa có
+
+        }
+        /* ================= Literature =================== */
 
     }
+    private void literature_from2021() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2020_hcm_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2020_hcm_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2020_hcm_tp3);
+        img_src_3.setImageBitmap(bitmap3);
+
+
+        cv4.setVisibility(View.GONE);
+
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+    }
+
+    private void literature_from2020() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2020_hcm_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2020_hcm_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2020_hcm_tp3);
+        img_src_3.setImageBitmap(bitmap3);
+
+
+        cv4.setVisibility(View.GONE);
+
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+    }
+
+    private void literature_from2019() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_hcm_2019_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        cv2.setVisibility(View.GONE);
+
+
+        cv3.setVisibility(View.GONE);
+        cv4.setVisibility(View.GONE);
+
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+    }
+
+    private void literature_from2018() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_hcm_2018_tp1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_hcm_2018_tp2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        cv3.setVisibility(View.GONE);
+        cv4.setVisibility(View.GONE);
+
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+    }
+
     private void english_from2021()
     {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.english_hcm_2021_tp1);

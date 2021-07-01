@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.nda.onthivao10_dethi.R;
+import com.startapp.sdk.adsbase.StartAppAd;
 
 public class DaNang_dapan extends AppCompatActivity {
     TextView txtMain_title;
@@ -29,6 +30,8 @@ public class DaNang_dapan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+                StartAppAd.showAd(getApplicationContext());
+
             }
         });
 
@@ -84,6 +87,136 @@ public class DaNang_dapan extends AppCompatActivity {
 
         }
         /*=============== English =============== */
+
+        /* ================= Literature =================== */
+        Intent literature_in_2018 = getIntent();
+        Bundle literature_extras_2018 = literature_in_2018.getExtras();
+        if (literature_extras_2018.containsKey("DaNang_literature_detail_2018")) {
+            txtMain_title.setText("(Đáp Án) Đề Thi Văn Vào 10 Năm 2018\n - Đà Nẵng -");
+            literature_from2018();
+
+        }
+
+        Intent literature_in_2019 = getIntent();
+        Bundle literature_extras_2019 = literature_in_2019.getExtras();
+        if (literature_extras_2019.containsKey("DaNang_literature_detail_2019")) {
+            txtMain_title.setText("(Đáp Án) Đề Thi Văn Vào 10 Năm 2019\n - Đà Nẵng -");
+            literature_from2019();
+
+        }
+
+        Intent literature_in_2020 = getIntent();
+        Bundle literature_extras_2020 = literature_in_2020.getExtras();
+        if (literature_extras_2020.containsKey("DaNang_literature_detail_2020")) {
+            txtMain_title.setText("(Đáp Án) Đề Thi Văn Vào 10 Năm 2020\n - Đà Nẵng -");
+            literature_from2020();
+
+        }
+
+        Intent literature_in_2021 = getIntent();
+        Bundle literature_extras_2021 = literature_in_2021.getExtras();
+        if (literature_extras_2021.containsKey("DaNang_literature_detail_2021")) {
+            txtMain_title.setText("(Đáp Án) Đề Thi Văn Vào 10 Năm 2021\n - Đà Nẵng -");
+            literature_from2021();
+
+        }
+        /* ================= Literature =================== */
+    }
+
+
+    private void literature_from2021() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2021_danang_rs1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2021_danang_rs2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2021_danang_rs3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        Bitmap bitmap4 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2021_danang_rs4);
+        img_src_4.setImageBitmap(bitmap4);
+
+        Bitmap bitmap5 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2021_danang_rs5);
+        img_src_5.setImageBitmap(bitmap5);
+
+        Bitmap bitmap6 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2021_danang_rs6);
+        img_src_6.setImageBitmap(bitmap6);
+
+        Bitmap bitmap7 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2021_danang_rs7);
+        img_src_7.setImageBitmap(bitmap7);
+
+        Bitmap bitmap8 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2021_danang_rs8);
+        img_src_8.setImageBitmap(bitmap8);
+
+        Bitmap bitmap9 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2021_danang_rs9);
+        img_src_9.setImageBitmap(bitmap9);
+
+        Bitmap bitmap10 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_2021_danang_rs10);
+        img_src_10.setImageBitmap(bitmap10);
+    }
+
+    private void literature_from2020() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_danang_2020_rs1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_danang_2020_rs2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_danang_2020_rs3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        Bitmap bitmap4 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_danang_2020_rs4);
+        img_src_4.setImageBitmap(bitmap4);
+
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+    }
+
+    private void literature_from2019() {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_danang_2019_rs1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_danang_2019_rs2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        cv3.setVisibility(View.GONE);
+        cv4.setVisibility(View.GONE);
+
+        cv5.setVisibility(View.GONE);
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+    }
+    private void literature_from2018()
+    {
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_danang_2018_rs1);
+        img_src_1.setImageBitmap(bitmap);
+
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_danang_2018_rs2);
+        img_src_2.setImageBitmap(bitmap2);
+
+        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(),R.mipmap.literature_danang_2018_rs3);
+        img_src_3.setImageBitmap(bitmap3);
+
+        cv4.setVisibility(View.GONE);
+
+
+        cv5.setVisibility(View.GONE);
+
+        cv6.setVisibility(View.GONE);
+        cv7.setVisibility(View.GONE);
+        cv8.setVisibility(View.GONE);
+        cv9.setVisibility(View.GONE);
+        cv10.setVisibility(View.GONE);
+
     }
     private void english_from2021()
     {
