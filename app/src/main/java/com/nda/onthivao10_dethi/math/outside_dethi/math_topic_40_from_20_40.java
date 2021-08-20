@@ -62,7 +62,7 @@ public class math_topic_40_from_20_40 extends AppCompatActivity {
                 }
             });
             BoDe();
-
+            
             RecyclerView recyclerView = findViewById(R.id.recycler_view);
             recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
             recyclerView.setAdapter(adapter = new AdapterWithNativeAd(this));

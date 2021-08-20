@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void Sharing() {
         Intent intent = new Intent(Intent.ACTION_SEND);
-        String shareBody = "Quyết Tâm Đỗ với \nhttps://play.google.com/store/apps/details?id=com.nda.playmathtolearn_hoctoanquagiaitri";
+        String shareBody = "Quyết Tâm Đỗ với \nhttps://play.google.com/store/apps/details?id=com.nda.onthivao10_dethi";
         /*The type of the content is text, obviously.*/
         intent.setType("text/plain");
         /*Applying information Subject and Body.*/

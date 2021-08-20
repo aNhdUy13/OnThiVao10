@@ -1,25 +1,55 @@
 package com.nda.onthivao10_dethi.history;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.JsonReader;
+import android.util.JsonToken;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.UiThread;
+import androidx.annotation.WorkerThread;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.nda.onthivao10_dethi.AdapterWithNativeAd;
+import com.nda.onthivao10_dethi.BuildConfig;
+import com.nda.onthivao10_dethi.MainActivity;
 import com.nda.onthivao10_dethi.R;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.HN_dapan;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.HN_de;
 import com.startapp.sdk.adsbase.StartAppAd;
+import com.startapp.sdk.adsbase.StartAppAd;
+import com.startapp.sdk.ads.nativead.NativeAdPreferences;
+import com.startapp.sdk.ads.nativead.StartAppNativeAd;
+import com.startapp.sdk.adsbase.Ad;
+import com.startapp.sdk.adsbase.StartAppAd;
+import com.startapp.sdk.adsbase.StartAppSDK;
+import com.startapp.sdk.adsbase.adlisteners.AdEventListener;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 public class history_DapAn_2021 extends AppCompatActivity {
     TextView txtMain_title,txt_src1,txt_src2,txt_src3,txt_src4,txt_src5,
             txt_src6,txt_src7,txt_src8,txt_src9,txt_src10;
     ImageView imgBack;
     Intent in_2021 ;
     CardView cv1,cv2,cv3,cv4,cv5,cv6,cv7,cv8,cv9,cv10;
+    private static final String LOG_TAG = MainActivity.class.getSimpleName();
+
+    @Nullable
+    protected AdapterWithNativeAd adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +63,13 @@ public class history_DapAn_2021 extends AppCompatActivity {
 
             }
         });
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+        recyclerView.setAdapter(adapter = new AdapterWithNativeAd(this));
+
+        loadData();
+        loadNativeAd();
+
         in_2021= getIntent();
         Bundle extras = in_2021.getExtras();
         if (extras.containsKey("history_dapan_2021"))
@@ -96,5 +133,70 @@ public class history_DapAn_2021 extends AppCompatActivity {
         cv10 = (CardView) findViewById(R.id.card_tp_id_10);
 
 
+    }
+    private void loadNativeAd() {
+        final StartAppNativeAd nativeAd = new StartAppNativeAd(this);
+
+        nativeAd.loadAd(new NativeAdPreferences()
+                .setAdsNumber(1)
+                .setAutoBitmapDownload(true)
+                .setPrimaryImageSize(2), new AdEventListener() {
+            @Override
+            public void onReceiveAd(Ad ad) {
+                if (adapter != null) {
+                    adapter.setNativeAd(nativeAd.getNativeAds());
+                }
+            }
+
+            @Override
+            public void onFailedToReceiveAd(Ad ad) {
+                if (BuildConfig.DEBUG) {
+                    Log.v(LOG_TAG, "onFailedToReceiveAd: " + ad.getErrorMessage());
+                }
+            }
+        });
+    }
+
+    // TODO example of loading JSON array, change this code according to your needs
+    @UiThread
+    private void loadData() {
+        if (adapter != null) {
+            adapter.setData(Collections.singletonList("Loading..."));
+        }
+
+        AsyncTask.THREAD_POOL_EXECUTOR.execute(new Runnable() {
+            @Override
+            @WorkerThread
+            public void run() {
+                String url = "https://raw.githubusercontent.com/StartApp-SDK/StartApp_InApp_SDK_Example/master/app/data.json";
+
+                final List<String> data = new ArrayList<>();
+
+                try (InputStream is = new URL(url).openStream()) {
+                    if (is != null) {
+                        JsonReader reader = new JsonReader(new InputStreamReader(is));
+                        reader.beginArray();
+
+                        while (reader.peek() == JsonToken.STRING) {
+                            data.add(reader.nextString());
+                        }
+
+                        reader.endArray();
+                    }
+                } catch (RuntimeException | IOException ex) {
+                    data.clear();
+                    data.add(ex.toString());
+                } finally {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (adapter != null) {
+                                adapter.setData(data);
+                            }
+                        }
+                    });
+                }
+            }
+        });
     }
 }
