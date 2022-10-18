@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.nda.onthivao10_dethi.R;
-import com.startapp.sdk.adsbase.StartAppAd;
 
 public class HCM_de extends AppCompatActivity {
     TextView txtMain_title;
@@ -31,8 +30,6 @@ public class HCM_de extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                StartAppAd.showAd(getApplicationContext());
-
             }
         });
         in_2018 = getIntent();

@@ -18,18 +18,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.nda.onthivao10_dethi.AdapterWithNativeAd;
-import com.nda.onthivao10_dethi.BuildConfig;
 import com.nda.onthivao10_dethi.MainActivity;
 import com.nda.onthivao10_dethi.R;
-import com.startapp.sdk.adsbase.StartAppAd;
-import com.nda.onthivao10_dethi.billing.advanced_setting;
-import com.startapp.sdk.ads.nativead.NativeAdPreferences;
-import com.startapp.sdk.ads.nativead.StartAppNativeAd;
-import com.startapp.sdk.adsbase.Ad;
-import com.startapp.sdk.adsbase.StartAppAd;
-import com.startapp.sdk.adsbase.StartAppSDK;
-import com.startapp.sdk.adsbase.adlisteners.AdEventListener;
+
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -41,8 +32,6 @@ import java.util.List;
 public class math_topic_40_from_20_40 extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
-    @Nullable
-    protected AdapterWithNativeAd adapter;
         ImageView imgMathTC_40_from_20_40_src1,imgMathTC_40_from_20_40_src2,imgMathTC_40_from_20_40_src3,imgMathTC_40_from_20_40_src4,imgMathTC_40_from_20_40_src5,
     imgMathTC_40_from_20_40_src6,imgMathTC_40_from_20_40_src7,imgMathTC_40_from_20_40_src8,imgMathTC_40_from_20_40_src9,imgMathTC_40_from_20_40_src10,
             imgMathTC_40_from_20_40_src11,imgMathTC_40_from_20_40_src12,imgMathTC_40_from_20_40_src13,imgMathTC_40_from_20_40_src14,imgMathTC_40_from_20_40_src15,
@@ -58,84 +47,12 @@ public class math_topic_40_from_20_40 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     finish();
-                    StartAppAd.showAd(getApplicationContext());
                 }
             });
             BoDe();
-            
-            RecyclerView recyclerView = findViewById(R.id.recycler_view);
-            recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
-            recyclerView.setAdapter(adapter = new AdapterWithNativeAd(this));
-
-            loadData();
-            loadNativeAd();
 
         }
-    private void loadNativeAd() {
-        final StartAppNativeAd nativeAd = new StartAppNativeAd(this);
 
-        nativeAd.loadAd(new NativeAdPreferences()
-                .setAdsNumber(1)
-                .setAutoBitmapDownload(true)
-                .setPrimaryImageSize(2), new AdEventListener() {
-            @Override
-            public void onReceiveAd(Ad ad) {
-                if (adapter != null) {
-                    adapter.setNativeAd(nativeAd.getNativeAds());
-                }
-            }
-
-            @Override
-            public void onFailedToReceiveAd(Ad ad) {
-                if (BuildConfig.DEBUG) {
-                    Log.v(LOG_TAG, "onFailedToReceiveAd: " + ad.getErrorMessage());
-                }
-            }
-        });
-    }
-
-    // TODO example of loading JSON array, change this code according to your needs
-    @UiThread
-    private void loadData() {
-        if (adapter != null) {
-            adapter.setData(Collections.singletonList("Loading..."));
-        }
-
-        AsyncTask.THREAD_POOL_EXECUTOR.execute(new Runnable() {
-            @Override
-            @WorkerThread
-            public void run() {
-                String url = "https://raw.githubusercontent.com/StartApp-SDK/StartApp_InApp_SDK_Example/master/app/data.json";
-
-                final List<String> data = new ArrayList<>();
-
-                try (InputStream is = new URL(url).openStream()) {
-                    if (is != null) {
-                        JsonReader reader = new JsonReader(new InputStreamReader(is));
-                        reader.beginArray();
-
-                        while (reader.peek() == JsonToken.STRING) {
-                            data.add(reader.nextString());
-                        }
-
-                        reader.endArray();
-                    }
-                } catch (RuntimeException | IOException ex) {
-                    data.clear();
-                    data.add(ex.toString());
-                } finally {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (adapter != null) {
-                                adapter.setData(data);
-                            }
-                        }
-                    });
-                }
-            }
-        });
-    }
 
     private void BoDe() {
         txtNaviTitle.setText("Bộ 40 Đề Được Bộ Chọn Lọc\n( 21 - 40 )");

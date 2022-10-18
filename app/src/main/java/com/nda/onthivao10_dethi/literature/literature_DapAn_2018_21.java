@@ -16,7 +16,6 @@ import com.nda.onthivao10_dethi.detail_2018_19_20_21.HCM_dapan;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.HCM_de;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.HN_dapan;
 import com.nda.onthivao10_dethi.detail_2018_19_20_21.HN_de;
-import com.startapp.sdk.adsbase.StartAppAd;
 
 public class literature_DapAn_2018_21 extends AppCompatActivity {
     TextView txtMain_title,txt_src1,txt_src2,txt_src3,txt_src4,txt_src5,
@@ -34,8 +33,6 @@ public class literature_DapAn_2018_21 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                StartAppAd.showAd(getApplicationContext());
-
             }
         });
         in_2018= getIntent();

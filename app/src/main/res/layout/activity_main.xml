@@ -68,7 +68,7 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_weight="5.4"
+            android:layout_weight="6.4"
             android:layout_width="match_parent"
             android:layout_height="0dp">
 
@@ -405,17 +405,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_weight="1"
-            android:gravity="center|bottom"
-            android:background="#255928"
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
-            <com.startapp.sdk.ads.banner.Banner
-                android:id="@+id/banner_main_screen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+
 
     </LinearLayout>
 

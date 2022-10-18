@@ -18,17 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Custom">
 
-        <meta-data
-            android:name="com.startapp.sdk.APPLICATION_ID"
-            android:value="205813971" />
 
         <activity android:name=".billing.advanced_setting"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
 
-
-        <meta-data
-            android:name="com.startapp.sdk.RETURN_ADS_ENABLED"
-            android:value="false" />
 
         <activity android:name=".literature.literature_DapAn_2018_21"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
@@ -157,13 +150,6 @@
             </intent-filter>
         </activity>
 
-        <receiver
-            android:name="com.startapp.sdk.adsbase.remoteconfig.BootCompleteListener"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
     </application>
 
 </manifest>
