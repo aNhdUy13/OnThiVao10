@@ -59,7 +59,7 @@
     <LinearLayout
         android:id="@+id/show_content"
         android:background="#EFEFEF"
-        android:layout_weight="5"
+        android:layout_weight="5.9"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp">
